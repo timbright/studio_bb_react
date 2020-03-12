@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import classes from "./CarouselBox.module.scss";
-import firstStudioImg from "../../assets/img/jpg/studio-1.jpg";
-import secondStudioImg from "../../assets/img/jpg/studio-2.jpg";
-import thirdStudioImg from "../../assets/img/jpg/studio-3.jpg";
-import fourthStudioImg from "../../assets/img/jpg/studio-4.jpg";
+import firstStudioImg from "../../assets/jpg/studio-1.jpg";
+import secondStudioImg from "../../assets/jpg/studio-2.jpg";
+import thirdStudioImg from "../../assets/jpg/studio-3.jpg";
+import fourthStudioImg from "../../assets/jpg/studio-4.jpg";
 
 export default class CarouselBox extends Component {
   state = {

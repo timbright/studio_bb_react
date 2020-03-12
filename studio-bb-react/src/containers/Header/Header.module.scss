@@ -1,0 +1,55 @@
+@import "src/styles/utils/variables.scss";
+.Header {
+  position: relative;
+  z-index: 99;
+  display: flex;
+  //  position: absolute;
+  justify-content: center;
+  align-items: center;
+  //  height: 100%;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #fff;
+  & h2 {
+    font-size: xx-large;
+    z-index: 100;
+  }
+  //  & a {
+  //    width: 130px;
+  //    height: 10px;
+  //  }
+
+  & svg {
+    height: 75px;
+
+    margin: 10px;
+  }
+}
+@media (min-width: $tabletWidth) {
+  .Header {
+    margin-bottom: 20px;
+    // & a {
+    //   display: block;
+    //   width: 200px;
+    // }
+    & svg {
+      height: 130px;
+      margin: 10px;
+    }
+  }
+}
+@media (min-width: $desktopWidth) {
+  .Header {
+    margin-bottom: 30px;
+    // margin: 30px;
+    // & a {
+    //   display: block;
+    //   width: 350px;
+    // }
+    & svg {
+      width: 350px;
+      height: 150px;
+      //margin: 60px;
+    }
+  }
+}

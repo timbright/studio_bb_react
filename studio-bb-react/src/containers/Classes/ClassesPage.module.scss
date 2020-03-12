@@ -1,0 +1,17 @@
+@import "src/styles/utils/variables.scss";
+
+.ClassesPage {
+  display: flex;
+  flex-grow: 1;
+
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: #e4e4;
+}
