@@ -8,35 +8,36 @@ import fourthStudioImg from "../../assets/img/jpg/studio-4.jpg";
 export default class CarouselBox extends Component {
   state = {
     images: [
-      { src: firstStudioImg, className: '' },
-      { src: secondStudioImg, className: '' },
-      { src: thirdStudioImg, className: '' },
-      { src: fourthStudioImg, className: '' }
+      { src: firstStudioImg, className: classes.view },
+      { src: secondStudioImg, className: classes.hide },
+      { src: thirdStudioImg, className: classes.hide },
+      { src: fourthStudioImg, className: classes.hide }
     ],
-    currentSlide: 0,
+    currentSlide: 0
   };
 
   changeSliders(items) {
-   const interval = window.setTimeout(() => {
-     if (this.state.currentSlide + 1 >= items.length) {
-       this.setState({
-         currentSlide: 0
-       });
-     } else {
-       this.setState({
-         currentSlide: this.state.currentSlide + 1
-       });
-     }
-     window.clearTimeout(interval) //@ очищаем память чтобы не было утечки
+    const interval = window.setInterval(() => {
+      if (this.state.currentSlide + 1 >= items.length) {
+        this.setState({
+          currentSlide: 0
+        });
+      } else {
+        this.setState({
+          currentSlide: this.state.currentSlide + 1
+        });
+      }
+      window.clearInterval(interval); //@ очищаем память чтобы не было утечки памяти и не было нескольких счетчиков
 
-     for (let i = 0; i < items.length; i++) { //@ задает всем фото opacity 0
-      items[i].className = classes.hide;
-    }
-    items[this.state.currentSlide].className = classes.view; //@ задает opacity 
-   }, 5000);
- }
+      for (let i = 0; i < items.length; i++) {
+        //@ задает всем фото opacity 0
+        items[i].className = classes.hide;
+      }
+      items[this.state.currentSlide].className = classes.view; //@ задает opacity
+    }, 10000);
+  }
 
-//@ отрисовывает картинки из стейта
+  //@ отрисовывает картинки из стейта
   renderSliders() {
     this.changeSliders(this.state.images);
 
@@ -48,7 +49,6 @@ export default class CarouselBox extends Component {
       );
     });
   }
-
 
   render() {
     return (
