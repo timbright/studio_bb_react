@@ -1,0 +1,65 @@
+@import "src/utils/variables.scss";
+
+.CarouselText {
+	width: 100%;
+	min-height: 165px;
+
+	& ul {
+		position: relative;
+
+		width: 90%;
+
+		margin: 0 auto;
+	}
+
+	& li {
+		position: absolute;
+		z-index: 2;
+
+		width: 100%;
+
+		top: 0;
+		left: 0;
+	}
+
+	& p {
+		font-size: rem($font-size-big);
+		padding-left: 5px;
+		font-style: italic;
+		&:last-child {
+			text-align: right;
+			//color: red;
+		}
+	}
+}
+
+.view {
+	opacity: 1;
+	transition: opacity 0.5s ease-in;
+}
+
+.hide {
+	opacity: 0;
+	transition: opacity 0.5s ease-in;
+}
+//*===========TABLET===================
+@media screen and (min-width: $tabletWidth) and (orientation: landscape) {
+	.CarouselText {
+		min-height: 150px;
+		& ul {
+			width: 80%;
+		}
+		& p {
+			padding-left: 10px;
+		}
+	}
+}
+//*==========DESKTOP==================
+@media screen and (min-width: $desktopWidth) {
+	.CarouselText {
+		min-height: 195px;
+		& p {
+			padding-left: 20px;
+		}
+	}
+}

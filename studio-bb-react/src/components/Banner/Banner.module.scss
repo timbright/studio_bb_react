@@ -1,0 +1,55 @@
+@import "src/utils/variables.scss";
+
+// *Begining style for Mobile
+.Banner {
+	display: flex;
+	flex-direction: column;
+	//  justify-content: center;
+	align-items: center;
+	margin: 16px;
+	text-align: center;
+
+	padding-left: 5px;
+	padding-right: 5px;
+
+	& h2 {
+		font-family: $secondary-font, serif;
+		font-weight: 300;
+		font-size: rem($font-size-big);
+		text-transform: uppercase;
+
+		margin: 0;
+		margin-bottom: 15px;
+
+		color: #b6869d;
+	}
+	& > div {
+		width: 50%;
+	}
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+// *End style for Mobile
+
+// *Begining style for Tablet
+@media (min-width: $tabletWidth), (orientation: landscape) {
+	.Banner {
+		& h2 {
+			margin-bottom: 15px;
+		}
+	}
+}
+// *End style for Tablet
+
+// *Begining style for Desktop
+@media (min-width: $desktopWidth) {
+	.Banner {
+		& h2 {
+			margin-bottom: 28px;
+		}
+	}
+}
+// *End style for Desktop

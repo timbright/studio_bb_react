@@ -1,0 +1,36 @@
+@import "src/utils/variables.scss";
+.Contact {
+	display: flex;
+	flex-direction: column;
+
+	font-size: rem(24);
+
+	margin-left: 16px;
+
+	& li {
+		cursor: pointer;
+		margin-bottom: 8px;
+
+		& a,
+		p,
+		svg {
+			text-decoration: none;
+			color: $text-color-default;
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+
+		&:last-child {
+			display: flex;
+			& svg {
+				margin-top: 6px;
+			}
+		}
+	}
+	& svg {
+		width: 16px;
+		height: 16px;
+		margin-right: 5px;
+	}
+}

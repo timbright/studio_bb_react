@@ -1,0 +1,66 @@
+@import "src/utils/variables.scss";
+
+.CarouselBox {
+	position: relative;
+	overflow: hidden;
+
+	width: 100%;
+	height: 100%;
+
+	& ul {
+		width: 100%;
+		min-height: 333px;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		position: relative;
+
+		overflow: hidden;
+	}
+
+	& li {
+		display: block;
+		width: 100%;
+		height: 100%;
+
+		transition: opacity 2s ease-in;
+		opacity: 1;
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		top: 0;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.view {
+	opacity: 1;
+	transition: opacity 2s ease-in;
+}
+
+.hide {
+	opacity: 0;
+	transition: opacity 2s ease-in;
+}
+//*===========TABLET===================
+@media screen and (min-width: $tabletWidth) and (orientation: landscape) {
+	.CarouselBox {
+		margin-bottom: 38px;
+
+		& ul {
+			min-height: 533px;
+		}
+	}
+}
+//*==========DESKTOP==================
+@media screen and (min-width: $desktopWidth) {
+	.CarouselBox ul {
+		min-height: 711px;
+	}
+}

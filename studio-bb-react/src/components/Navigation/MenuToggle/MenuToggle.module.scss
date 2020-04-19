@@ -1,36 +1,46 @@
-@import "src/styles/utils/variables.scss";
+@import "src/utils/variables.scss";
 @media (max-width: $desktopWidth) {
-  .MenuToggle {
-    position: absolute;
-    z-index: 100;
-    top: 40px;
-    right: 40px;
-    font-size: 26px;
-    cursor: pointer;
-    color: $primary-color;
-    z-index: 100;
-    // transition: opacity, left 0.22s ease-in;
-  }
+	.MenuToggle {
+		position: absolute;
+		z-index: 100;
+		top: 40px;
+		right: 40px;
 
-  .MenuToggle:hover {
-    opacity: 0.7;
-  }
+		// top: 354px;
+		// right: 145px;
 
-  .MenuToggle.open {
-    //  left: 320px;
-  }
+		font-size: 26px;
+		// font-size: 56px;
+
+		cursor: pointer;
+		color: $primary-color;
+		z-index: 200;
+
+		// object-fit: cover;
+		// transition: opacity, left 0.22s ease-in;
+	}
+
+	.MenuToggle:hover {
+		opacity: 0.7;
+	}
+
+	.MenuToggle.open {
+		position: fixed;
+		//  left: 320px;
+	}
 }
-@media (min-width: $tabletWidth) {
-  .MenuToggle {
-    font-size: 34px;
-    top: 72px;
-    right: 64px;
-  }
+//*===========TABLET===================
+@media screen and (min-width: $tabletWidth) and (orientation: landscape) {
+	.MenuToggle {
+		font-size: 34px;
+		top: 72px;
+		right: 64px;
+	}
 }
-
-@media (min-width: $desktopWidth) {
-  .MenuToggle {
-    display: none;
-    visibility: hidden;
-  }
+//*==========DESKTOP==================
+@media screen and (min-width: $desktopWidth) {
+	.MenuToggle {
+		display: none;
+		visibility: hidden;
+	}
 }

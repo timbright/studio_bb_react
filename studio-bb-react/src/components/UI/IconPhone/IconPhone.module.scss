@@ -1,0 +1,29 @@
+@import "src/utils/variables.scss";
+.IconPhone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  & svg {
+    width: 30px;
+    height: 30px;
+
+    color: #a08a84;
+  }
+}
+//*===========TABLET===================
+@media screen and (min-width: $tabletWidth) and (orientation: landscape) {
+  .IconPhone {
+    top: 60px;
+    left: 20px;
+
+    & svg {
+      width: 42px;
+      height: 42px;
+    }
+  }
+}
+//*==========DESKTOP==================
+@media screen and (min-width: $desktopWidth) {
+  .IconPhone {
+  }
+}

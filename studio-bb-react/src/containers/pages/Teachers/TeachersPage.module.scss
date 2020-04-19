@@ -1,0 +1,19 @@
+@import "src/utils/variables.scss";
+
+.TeachersPage {
+	margin: 0 auto;
+
+	display: flex;
+	flex-grow: 1;
+
+	width: 80%;
+
+	position: relative;
+
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: center;
+
+	//background-color: #dddd;
+}

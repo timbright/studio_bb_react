@@ -1,0 +1,15 @@
+@import "src/utils/variables.scss";
+.Social {
+	display: flex;
+	//  align-items: center;
+	//  justify-content: left;
+	& svg {
+		margin: 10px;
+		width: 50px;
+		color: $primary-color;
+
+		&:hover {
+			color: $neutral-secondary;
+		}
+	}
+}
