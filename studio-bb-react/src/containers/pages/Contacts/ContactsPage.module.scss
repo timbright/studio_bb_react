@@ -1,19 +1,39 @@
 @import "src/utils/variables.scss";
 
-.ContactsPage {
-	display: flex;
-	flex-grow: 1;
+// *Begining style for Mobile
+//
+//
+//
+//
+// *End style for Mobile
 
-	width: 80%;
-	margin: 0 auto;
-	//  width: 100%;
-	//  height: 100vh;
-	position: relative;
-
-	flex-direction: column;
-
-	align-items: center;
-	justify-content: center;
-
-	background-color: #a7a7;
+// *Begining style for Tablet
+@media (min-width: $tabletWidth), (orientation: landscape) {
+	//
+	//
+	//
+	//
 }
+// *End style for Tablet
+
+// *Begining style for Desktop
+@media (min-width: $desktopWidth) {
+	.ContactsPage {
+		display: flex;
+		flex-grow: 1;
+
+		width: 80%;
+		margin: 0 auto;
+		//  width: 100%;
+		//  height: 100vh;
+		position: relative;
+
+		//flex-direction: column;
+
+		align-items: center;
+		justify-content: center;
+
+		background-color: #a7a7;
+	}
+}
+// *End style for Desktop

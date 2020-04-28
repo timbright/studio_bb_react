@@ -1,4 +1,6 @@
-@import "src/utils/variables.scss";
+@import "../../../utils/variables.scss";
+
+// *Begining style for Mobile
 .Contact {
 	display: flex;
 	flex-direction: column;
@@ -34,3 +36,28 @@
 		margin-right: 5px;
 	}
 }
+
+// *End style for Mobile
+
+// *Begining style for Tablet
+@media (min-width: $tabletWidth), (orientation: landscape) {
+	//
+	//
+	//
+	//
+}
+// *End style for Tablet
+
+// *Begining style for Desktop
+@media (min-width: $desktopWidth) {
+	.Contact {
+		font-size: rem(16);
+		margin: 10px 0;
+		& li a,
+		li p,
+		li svg {
+			color: $text-color-default-light;
+		}
+	}
+}
+// *End style for Desktop

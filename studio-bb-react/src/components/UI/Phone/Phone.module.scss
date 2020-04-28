@@ -1,0 +1,30 @@
+@import "../../../utils/variables.scss";
+
+// *Begining style for Mobile
+.Phone {
+	display: none;
+}
+// *End style for Mobile
+
+// *Begining style for Tablet
+@media (min-width: $tabletWidth), (orientation: landscape) {
+	//
+}
+// *End style for Tablet
+
+// *Begining style for Desktop
+@media (min-width: $desktopWidth) {
+	.Phone {
+		position: absolute;
+		left: 0;
+		top: 10%;
+		display: block;
+
+		& a {
+			color: $neutral-regular;
+			text-decoration: none;
+			margin-left: 40px;
+		}
+	}
+}
+// *End style for Desktop

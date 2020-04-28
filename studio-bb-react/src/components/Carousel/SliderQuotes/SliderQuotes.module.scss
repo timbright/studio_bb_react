@@ -1,6 +1,6 @@
 @import "src/utils/variables.scss";
 
-.CarouselText {
+.SliderQuotes {
 	width: 100%;
 	min-height: 165px;
 
@@ -44,7 +44,7 @@
 }
 //*===========TABLET===================
 @media screen and (min-width: $tabletWidth) and (orientation: landscape) {
-	.CarouselText {
+	.SliderQuotes {
 		min-height: 150px;
 		& ul {
 			width: 80%;
@@ -56,7 +56,7 @@
 }
 //*==========DESKTOP==================
 @media screen and (min-width: $desktopWidth) {
-	.CarouselText {
+	.SliderQuotes {
 		min-height: 195px;
 		& p {
 			padding-left: 20px;

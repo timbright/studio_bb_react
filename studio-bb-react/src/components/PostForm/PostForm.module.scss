@@ -1,0 +1,292 @@
+@import "../../utils/variables.scss";
+
+// *Begining style for Mobile
+@media (max-width: $desktopWidth) {
+	.PostForm {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		& form {
+			position: relative;
+			width: 80%;
+			max-width: 800px;
+			padding: 25px;
+			border: 1px solid #383838;
+			background: #d1d1d1;
+
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -60%);
+
+			/* My stripped background */
+			background: repeating-linear-gradient(
+				-45deg,
+				$primary-color-light,
+				$primary-color-light 30px,
+				#f2f2f2 30px,
+				#f2f2f2 40px,
+				$tertiary-color 40px,
+				$tertiary-color 70px,
+				#f2f2f2 70px,
+				#f2f2f2 80px
+			);
+			border-radius: 8px;
+			box-shadow: 0px 1px 6px #3f3f3f;
+
+			&::after {
+				background: #f9f9f9;
+				margin: 10px;
+				position: absolute;
+				content: "";
+				bottom: 0;
+				left: 0;
+				right: 0;
+				top: 0;
+				z-index: -1;
+				border: 1px #e5e5e5 solid;
+				border-radius: 8px;
+			}
+		}
+	}
+}
+
+.PostForm {
+	background-color: rgba(0, 0, 0, 0.5);
+	/* Black background with opacity */
+	z-index: 1000;
+	/* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer;
+	/* Add a pointer on hover */
+
+	& span {
+		color: $text-color-required;
+		margin-left: 2px;
+	}
+
+	& div svg {
+		width: 15px;
+		height: 15px;
+
+		color: $text-color-default-light;
+	}
+
+	& legend {
+		position: relative;
+		font-family: $secondary-font;
+		font-weight: $font-weight-bold;
+		font-size: rem(18px);
+		padding: 0;
+
+		text-align: center;
+		color: #8c8c8c;
+
+		&::after {
+			font-size: 18px;
+			color: #d6cfcb;
+			content: "@";
+			text-align: center;
+			display: block;
+			width: 100%;
+
+			text-shadow: 0px 1px 0px #fff;
+		}
+
+		&:before {
+			position: absolute;
+			bottom: 8px;
+			content: " ";
+			text-align: center;
+			display: block;
+			height: 2px;
+			width: 100%;
+			background: linear-gradient(
+				to left,
+				rgba(255, 255, 255, 0) 0%,
+				rgba(182, 180, 180, 0.7) 42%,
+				rgba(180, 178, 178, 0) 43%,
+				rgba(168, 166, 166, 0) 50%,
+				rgba(180, 178, 178, 0) 57%,
+				rgba(182, 180, 180, 0.7) 58%,
+				rgba(238, 237, 237, 0.3) 90%,
+				rgba(255, 255, 255, 0) 100%
+			);
+		}
+	}
+
+	& label {
+		position: relative;
+		margin-left: 6px;
+		font-family: $secondary-font;
+		font-size: $font-size-smaller;
+		color: $text-color-default-light;
+		transition: color 1s ease;
+		cursor: pointer;
+
+		&:hover {
+			color: #191919;
+		}
+
+		//&:before {
+		//	color: #c1bfbd;
+		//	color: green;
+		//	transition: color 1s ease;
+		//}
+
+		//&:hover:before {
+		//	//color: #969696;
+		//	color: green;
+		//	transition: color 1s ease;
+		//}
+	}
+
+	& input {
+		height: 20px;
+	}
+
+	& textarea {
+		min-height: 100px;
+		resize: vertical;
+	}
+
+	& input,
+	& textarea {
+		outline: none;
+		display: block;
+		width: 100%;
+		padding: 16px 8px;
+		border: 1px dashed $border-base;
+		color: $text-color-default-dark;
+		font-size: $font-size-medium;
+		border-radius: 2px;
+		transition: background 0.2s linear, box-shadow 0.6s linear;
+
+		&:active,
+		&:focus {
+			background: $neutral-placeholder;
+			border: dashed 1px$neutral-secondary;
+			box-shadow: 2px 2px 7px $border-lighter inset;
+		}
+
+		&::placeholder {
+			color: $text-color-default-lighter;
+			font-style: italic;
+		}
+	}
+
+	& button:first-child {
+		position: absolute;
+		top: -10px;
+		right: -14px;
+
+		background-color: transparent;
+		cursor: pointer;
+
+		& svg {
+			width: 28px;
+			height: 28px;
+			color: $tertiary-color;
+		}
+	}
+
+	& button:last-child {
+		display: block;
+		width: 100%;
+		cursor: pointer;
+		background: none;
+		border: none;
+
+		color: $text-color-default-light;
+		font-size: $font-size-medium;
+
+		padding: 10px 15px;
+		margin: 0 auto;
+		margin-top: 15px;
+
+		border: 1px solid $border-light;
+		text-shadow: 0px 1px 1px #e8e8e8;
+		background: $neutral-placeholder;
+		background: linear-gradient(
+			to top,
+			$neutral-placeholder-dark 1%,
+			$neutral-placeholder 100%
+		);
+		border-radius: 5px;
+		box-shadow: 0px 1px 1px $default-color inset, 0 0 0px 3px $border-light;
+		transition: all 0.2s linear;
+
+		&:hover {
+			color: #8f8f8f;
+			border-color: #cecece;
+			background: linear-gradient(
+				to top,
+				$neutral-placeholder-darker 0%,
+				$neutral-placeholder 100%
+			);
+			box-shadow: 0px 1px 1px $default-color inset, 0 0 0px 3px $border-lighter;
+		}
+
+		&:active,
+		&:focus {
+			position: relative;
+			top: 1px;
+			color: $text-color-default-light;
+			background: linear-gradient(
+				to top,
+				#dfdfdf 0%,
+				$neutral-placeholder 100%
+			);
+			box-shadow: 0px -1px 1px $default-color inset, 0 0 0px 3px $border-lighter;
+		}
+	}
+}
+
+// *End style for Mobile
+
+// *Begining style for Tablet
+@media (min-width: $tabletWidth), (orientation: landscape) {
+	.PostForm form {
+		width: 60%;
+	}
+}
+// *End style for Tablet
+
+// *Begining style for Desktop
+@media (min-width: $desktopWidth) {
+	.PostForm {
+		position: relative;
+		display: block;
+		width: 40%;
+		margin: 10px;
+
+		& form {
+			width: 100%;
+			padding: 20px;
+
+			background: #f9f9f9;
+			border: 1px solid #383838;
+			box-shadow: 0px 1px 6px #3f3f3f;
+
+			& button:first-child {
+				display: none;
+			}
+		}
+
+		& legend {
+			display: none;
+		}
+
+		& label {
+			position: relative;
+			font-size: $font-size-default;
+		}
+		& div svg {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+// *End style for Desktop

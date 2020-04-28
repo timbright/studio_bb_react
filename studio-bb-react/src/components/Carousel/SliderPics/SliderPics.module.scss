@@ -1,6 +1,6 @@
 @import "src/utils/variables.scss";
 
-.CarouselBox {
+.SliderPics {
 	position: relative;
 	overflow: hidden;
 
@@ -50,7 +50,7 @@
 }
 //*===========TABLET===================
 @media screen and (min-width: $tabletWidth) and (orientation: landscape) {
-	.CarouselBox {
+	.SliderPics {
 		margin-bottom: 38px;
 
 		& ul {
@@ -60,7 +60,7 @@
 }
 //*==========DESKTOP==================
 @media screen and (min-width: $desktopWidth) {
-	.CarouselBox ul {
+	.SliderPics ul {
 		min-height: 711px;
 	}
 }

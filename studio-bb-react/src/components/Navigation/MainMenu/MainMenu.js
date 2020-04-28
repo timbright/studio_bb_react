@@ -5,18 +5,17 @@ import { NavLink } from "react-router-dom";
 import MenuToggle from "../MenuToggle/MenuToggle";
 import { MenuContext } from "../../../context/menu/menuContext";
 
-const links = [
-	{ to: "/", label: "Главная", exact: true },
-	{ to: "/studio", label: "Студия", exact: false },
-	{ to: "/teachers", label: "Преподаватели", exact: false },
-	{ to: "/classes", label: "Классы", exact: false },
-	{ to: "/schedule", label: "Расписание", exact: false },
-	{ to: "/contacts", label: "Контакты", exact: false },
-];
-
 const MainMenu = () => {
 	const { menu, toggle, close } = useContext(MenuContext);
 	//	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+
+	const links = [
+		{ to: "/", label: "Главная", exact: true },
+		{ to: "/studio", label: "Студия", exact: false },
+		{ to: "/teachers", label: "Преподаватели", exact: false },
+		{ to: "/classes", label: "Классы", exact: false },
+		{ to: "/schedule", label: "Расписание", exact: false },
+	];
 
 	const renderLinks = () => {
 		return links.map((link, index) => {
@@ -39,6 +38,10 @@ const MainMenu = () => {
 
 	if (menu.open) {
 		cls.push(classes.open);
+	}
+
+	if (window.innerWidth >= 1280) {
+		links.push({ to: "/contacts", label: "Контакты", exact: false });
 	}
 
 	return (

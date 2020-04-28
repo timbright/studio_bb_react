@@ -1,6 +1,6 @@
 @import "src/utils/variables.scss";
 
-.HomePage {
+.HomeContainer {
 	display: flex;
 	flex-grow: 1;
 
@@ -18,7 +18,7 @@
 }
 //*===========TABLET===================
 @media screen and (min-width: $tabletWidth) and (orientation: landscape) {
-	.HomePage > div {
+	.HomeContainer > div {
 		display: flex;
 		width: 80%;
 	}

@@ -1,43 +1,61 @@
 import React from "react";
 import classes from "./HomePage.module.scss";
-import CarouselBox from "../../../components/Carousel/CarouselImg/CarouselBox";
-import CarouselText from "../../../components/Carousel/CarouselText/CarouselText";
+import SliderPics from "../../../components/Carousel/SliderPics/SliderPics";
+import SliderQuotes from "../../../components/Carousel/SliderQuotes/SliderQuotes";
 import SlideBlocks from "../../../components/SlideBlocks/SlideBlocks";
 import Banner from "../../../components/Banner/Banner";
 import Contact from "../../../components/Location/Contact/Contact";
 import Map from "../../../components/Location/Map/Map";
 
+import firstStudioImg from "../../../assets/jpg/studio-1.jpg";
+import secondStudioImg from "../../../assets/jpg/studio-2.jpg";
+import thirdStudioImg from "../../../assets/jpg/studio-3.jpg";
+import fourthStudioImg from "../../../assets/jpg/studio-4.jpg";
+
+const pics = [
+	{ src: firstStudioImg, alt: "photoStudio", className: "" },
+	{ src: secondStudioImg, alt: "photoStudio", className: "" },
+	{ src: thirdStudioImg, alt: "photoStudio", className: "" },
+	{ src: fourthStudioImg, alt: "photoStudio", className: "" },
+];
+
+const quotes = [
+	{
+		text: `"Мы уходим на пенсию очень рано и умираем слишком молодыми. Расцвет жизни должен наступать в 70 лет, и только ближе к 100 — старость."`,
+		className: "",
+	},
+	{
+		text: `"Ум, который находится в здоровом теле, проявляется во всем блеске."`,
+		className: "",
+	},
+	{
+		text: `"Если в 30 лет ваш позвоночник потерял свою гибкость, вы старик. Если в 60 лет он гибок и подвижен, то вы молоды."`,
+		className: "",
+	},
+	{
+		text: ` "Через 10 занятий вы почувствуете разницу, через 20 — увидите разницу, а через 30 вы получите совершенно новое тело."`,
+		className: "",
+	},
+	{
+		text: `"Физическая активность — это первое условие счастья. Фитнес помогает получить здоровое тело и сильный ум и позволяет нам делать наши насущные дела легко, естественно и хорошо. И с удовольствием."`,
+		className: "",
+	},
+	{
+		text: `"Каждый момент в жизни может стать началом грандиозных перемен."`,
+		className: "",
+	},
+];
+
 const HomePage = () => (
-	<section className={classes.HomePage}>
+	<section className={classes.HomeContainer}>
 		<h1 className="visually-hidden">Home</h1>
-		<CarouselBox />
+		<SliderPics pics={pics} />
 		<Banner />
 		<SlideBlocks />
-		<CarouselText />
+		<SliderQuotes quotes={quotes} />
 		<div>
-			{window.innerWidth <= 1280 && (
-				<Contact
-					link="https://goo.gl/maps/NW7RtuqB22GsncSX8"
-					location="проспект Сакена Сейфуллина 617, Алматы"
-					hrefTel="tel:+78125556666"
-					tel="+7 (700) 111-66-66"
-					hrefMail="mailto:info@bodybalance.kz"
-					mail="info@bodybalance.kz"
-					weekdaysHours="пн-пт: 7:00 - 21:00"
-					saturdayHours="сб: 10:00 - 16:00 | 18:00 - 20:00"
-					sundayHours="вс: 12:00 - 14:00 | 16:00 -19:00"
-				/>
-			)}
-			{window.innerWidth <= 1280 && (
-				<Map
-					head="Пилатес студия на карте города"
-					title="map"
-					src="https://yandex.ru/map-widget/v1/?um=constructor%3A59bbcaa30455e57a81c5202af2f1678d83a77961b5ce07b553a3656a59840780&amp;source=constructor"
-					width="100%"
-					height="100%"
-					frameborder="0"
-				/>
-			)}
+			{window.innerWidth <= 1280 && <Contact flag />}
+			{window.innerWidth <= 1280 && <Map />}
 		</div>
 	</section>
 );
