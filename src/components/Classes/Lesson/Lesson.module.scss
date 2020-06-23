@@ -1,0 +1,32 @@
+@import "src/utils/variables.scss";
+
+.Lesson {
+	margin-bottom: 10px;
+
+	& h2 {
+		margin-bottom: 6px;
+	}
+	& p {
+		font-size: $font-text-mobile;
+	}
+}
+
+@media (min-width: $tabletWidth), (orientation: landscape) {
+	.Lesson {
+		margin-bottom: 12px;
+
+		& p {
+			font-size: $font-text-tablet;
+		}
+	}
+}
+
+@media (min-width: $desktopWidth) {
+	.Lesson {
+		margin-bottom: 16px;
+
+		& p {
+			font-size: $font-text-desktop;
+		}
+	}
+}

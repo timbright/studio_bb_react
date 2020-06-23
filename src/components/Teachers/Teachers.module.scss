@@ -1,0 +1,30 @@
+@import "src/utils/variables.scss";
+
+.Teachers {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+
+	width: 80%;
+	margin: 0 auto;
+}
+
+//// *Begining style for Mobile
+.Teachers {
+	//display: flex;
+	//flex-wrap: wrap;
+	//justify-content: center;
+	//align-items: center;
+}
+//// *End style for Mobile
+
+//// *Begining style for Tablet
+@media (min-width: $tabletWidth), (orientation: landscape) {
+}
+//// *End style for Tablet
+
+//// *Begining style for Desktop
+@media (min-width: $desktopWidth) {
+}
+// *End style for Desktop

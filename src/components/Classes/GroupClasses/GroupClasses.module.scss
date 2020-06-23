@@ -1,0 +1,69 @@
+@import "src/utils/variables.scss";
+
+// *Begining style for Mobile
+.GroupClasses {
+	flex-grow: 1;
+
+	width: 80%;
+	margin: 0 auto;
+
+	& h2 {
+		font-size: $font-size-big;
+		font-weight: $font-weight-light;
+		text-align: center;
+	}
+
+	& h3 {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	& ul {
+		margin-bottom: 18px;
+	}
+
+	& li {
+		margin-bottom: 18px;
+		& h2 {
+			margin-bottom: 18px;
+		}
+	}
+}
+
+////// *End style for Mobile
+
+////// *Begining style for Tablet
+@media (min-width: $tabletWidth), (orientation: landscape) {
+	.GroupClasses p {
+		font-size: $font-text-tablet;
+		margin-bottom: 18px;
+	}
+}
+////// *End style for Tablet
+
+////// *Begining style for Desktop
+@media (min-width: $desktopWidth) {
+	.GroupClasses {
+		& ul {
+			margin-bottom: 28px;
+		}
+		& li {
+			margin-bottom: 32px;
+			& h2 {
+				margin-bottom: 20px;
+			}
+		}
+		& h2 {
+			font-size: $font-size-huge;
+		}
+		& h3 {
+			margin-bottom: 32px;
+			font-size: $font-size-medium;
+		}
+
+		////		& ul {
+		////			//margin-bottom: 32px;
+		////		}
+	}
+}
+////// *End style for Desktop

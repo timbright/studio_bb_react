@@ -1,0 +1,41 @@
+@import "src/utils/variables.scss";
+
+.Footer {
+	display: flex;
+	align-items: center;
+	//justify-content: space-around;
+	justify-content: space-between;
+	width: 100%;
+	background-color: $neutral-primary;
+
+	padding: 1% 3%;
+
+	& .logo {
+		width: 130px;
+	}
+}
+
+// *Begining style for Mobile
+.Footer section {
+	display: none;
+}
+// *End style for Mobile
+
+// *Begining style for Tablet
+@media (min-width: $tabletWidth), (orientation: landscape) {
+	//
+	//
+	//
+}
+// *End style for Tablet
+
+// *Begining style for Desktop
+@media (min-width: $desktopWidth) {
+	.Footer section {
+		display: flex;
+	}
+	//
+	//
+	//
+}
+// *End style for Desktop

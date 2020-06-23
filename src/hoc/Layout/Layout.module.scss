@@ -1,0 +1,17 @@
+@import "src/utils/variables.scss";
+
+.Content {
+	margin-top: 105px;
+}
+
+@media (min-width: $tabletWidth) {
+	.Content {
+		margin-top: 175px;
+	}
+}
+
+@media (min-width: $desktopWidth) {
+	.Content {
+		margin-top: 0;
+	}
+}

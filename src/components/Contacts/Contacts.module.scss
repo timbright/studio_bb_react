@@ -1,0 +1,43 @@
+@import "src/utils/variables.scss";
+
+// *Begining style for Mobile
+.Contacts {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+
+	align-items: center;
+	justify-content: center;
+
+	margin-bottom: 50px;
+}
+// *End style for Mobile
+
+@media (orientation: landscape) {
+	//.Contacts {
+	//	flex-direction: row;
+	//}
+}
+
+// *Begining style for Tablet
+@media (min-width: $tabletWidth) {
+	.Contacts {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+}
+// *End style for Tablet
+
+// *Begining style for Desktop
+@media (min-width: $desktopWidth) {
+	.Contacts {
+		//flex-direction: initial;
+		//align-items: flex-start;
+	}
+}
+// *End style for Desktop

@@ -1,0 +1,38 @@
+@import "src/utils/variables.scss";
+
+@media (max-width: $desktopWidth) {
+	.DrawerToggle {
+		position: absolute;
+		z-index: 100;
+		top: 40px;
+		right: 40px;
+
+		font-size: 26px;
+
+		cursor: pointer;
+		color: $primary-color;
+	}
+
+	//.toggle:hover {
+	//	opacity: 0.7;
+	//}
+
+	//.toggle.open {
+	//	position: fixed;
+	//}
+}
+//*===========TABLET===================
+@media screen and (min-width: $tabletWidth) and (orientation: landscape) {
+	//.toggle {
+	//	font-size: 34px;
+	//	top: 72px;
+	//	right: 64px;
+	//}
+}
+//*==========DESKTOP==================
+@media screen and (min-width: $desktopWidth) {
+	//.toggle {
+	//	display: none;
+	//	visibility: hidden;
+	//}
+}

@@ -1,0 +1,28 @@
+@import "src/utils/variables.scss";
+
+.container {
+	display: flex;
+	flex-grow: 1;
+
+	width: 100%;
+	position: relative;
+
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: center;
+
+	& > div {
+		width: 90%;
+	}
+}
+//*===========TABLET===================
+@media screen and (min-width: $tabletWidth) and (orientation: landscape) {
+	.location {
+		display: flex;
+		width: 80%;
+	}
+}
+//*==========DESKTOP==================
+@media screen and (min-width: $desktopWidth) {
+}

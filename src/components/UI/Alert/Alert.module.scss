@@ -1,0 +1,88 @@
+@import "src/utils/variables.scss";
+
+.Alert {
+	position: absolute;
+	display: flex;
+	flex-flow: column;
+
+	overflow: hidden;
+
+	align-items: center;
+
+	width: 90%;
+	height: 30%;
+
+	padding-top: 10px;
+
+	border-radius: 3px;
+	background: $default-color;
+
+	background-clip: padding-box;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+	& div:first-child {
+		display: flex;
+		width: 95%;
+		height: 30%;
+		border-radius: 5px;
+		font-size: $font-size-huge;
+		color: $default-color;
+
+		justify-content: center;
+		align-items: center;
+
+		font-weight: $font-weight-bold;
+	}
+
+	& p {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		white-space: nowrap;
+
+		margin-top: 10%;
+
+		font-size: 18px;
+		font-weight: $font-weight-bold;
+		//line-height: 30px;
+	}
+}
+
+.Success {
+	animation-duration: 3s;
+	animation-name: disappear;
+
+	& div:first-child {
+		background: $success-color;
+	}
+}
+
+.Error {
+	animation-duration: 3s;
+	animation-name: disappear;
+
+	& div:first-child {
+		background: $danger-color;
+	}
+}
+
+@keyframes disappear {
+	0% {
+		width: 0;
+		opacity: 0;
+	}
+	10% {
+		width: 100%;
+		opacity: 1;
+	}
+	90% {
+		width: 100%;
+		opacity: 1;
+	}
+	100% {
+		width: 0;
+		opacity: 0;
+	}
+}

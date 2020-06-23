@@ -1,0 +1,64 @@
+@import "../../../utils/variables.scss";
+.Input {
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.Label {
+	position: relative;
+
+	margin-left: 6px;
+
+	font-family: $secondary-font;
+	font-size: $font-size-medium;
+
+	color: $text-color-default;
+
+	transition: color 1s ease;
+	cursor: pointer;
+
+	&:hover {
+		color: #191919;
+	}
+}
+
+.InputElement {
+	outline: none;
+	display: block;
+
+	width: 100%;
+	height: 42px;
+
+	font-size: $font-size-medium;
+
+	padding: 0 7px;
+
+	border: 1px solid $border-base;
+	transition: all 300ms ease-in-out;
+
+	&::placeholder {
+		color: $text-color-default-lighter;
+		font-style: italic;
+	}
+
+	&:focus {
+		outline: none;
+		background-color: #ccc;
+	}
+}
+
+.Input textarea {
+	min-height: 100px;
+	width: 100%;
+	resize: vertical;
+	border: 1px solid $border-base;
+
+	&::placeholder {
+		padding-top: 5px;
+	}
+}
+
+.Invalid {
+	border: 1px solid red;
+	background-color: #fda49a;
+}

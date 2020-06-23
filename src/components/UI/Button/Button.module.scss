@@ -1,0 +1,93 @@
+@import "src/utils/variables.scss";
+
+.Button {
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 5px;
+	//margin-right: 15px;
+	text-transform: uppercase;
+
+	//font-weight: bold;
+	font-size: 12px;
+
+	color: $default-color;
+	background: #008cba;
+	opacity: 0.8;
+
+	width: 100%;
+	cursor: pointer;
+}
+.Button:hover {
+	//border-collapse: collapse;
+	//background-color: red;
+}
+
+.Button:focus {
+	outline: none;
+}
+
+.Button:disabled {
+	outline: none;
+	cursor: not-allowed;
+	background: #c5c5c5;
+
+	color: black;
+	opacity: 0.5;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
+.error {
+	background: red;
+}
+
+.success {
+	background: green;
+}
+
+.primary {
+	background: #2884f6;
+	color: #fff;
+}
+
+.block {
+	min-width: 100px;
+	min-height: 30px;
+
+	margin: 5px;
+	background-color: #b6869d;
+	opacity: 0.7;
+	color: $default-color;
+	font-size: $font-size-small;
+	font-weight: 900;
+
+	cursor: pointer;
+
+	&:hover {
+		opacity: 1;
+	}
+	&:active {
+		border: 2px solid $default-color;
+	}
+}
+
+.feedback {
+	margin: 5px;
+	font-weight: bold;
+	border: 1px solid $border-base;
+	padding: 1em 0.5em;
+
+	&:hover {
+		//background: $border-lighter;
+		opacity: 1;
+	}
+
+	&:active {
+		padding: calc(1em + 1px) 0.5em calc(1em - 1px);
+		//border-color: $border-lighter;
+		box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.1),
+			inset 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 0 0 60px #3694b3;
+	}
+}

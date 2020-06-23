@@ -1,0 +1,67 @@
+@import "../../../utils/variables.scss";
+
+// *Begining style for Mobile
+.Contact {
+	display: flex;
+	flex-direction: column;
+
+	font-size: $font-size-default;
+
+	margin-left: 16px;
+
+	& li {
+		margin-bottom: 8px;
+
+		& a,
+		p,
+		svg {
+			color: $text-color-default;
+		}
+
+		& p {
+			color: $text-color-default;
+			font-weight: $font-weight-default;
+		}
+
+		&:last-child {
+			display: flex;
+
+			& svg {
+				margin-top: 6px;
+			}
+		}
+	}
+
+	& svg {
+		width: 16px;
+		height: 16px;
+		margin-right: 5px;
+	}
+}
+.link {
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+// *End style for Mobile
+
+// *Begining style for Tablet
+@media (min-width: $tabletWidth), (orientation: landscape) {
+	//
+	//
+	//
+	//
+}
+// *End style for Tablet
+
+// *Begining style for Desktop
+@media (min-width: $desktopWidth) {
+	.Contact {
+		//margin: 20px 50px;
+		//padding: 50px;
+	}
+}
+// *End style for Desktop

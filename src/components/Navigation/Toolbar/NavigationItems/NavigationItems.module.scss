@@ -1,0 +1,28 @@
+@import "src/utils/variables.scss";
+//.Pseudo::after {
+//	display: inline-block;
+//	width: 0;
+//	height: 0;
+//	margin-left: 0.255em;
+//	vertical-align: 0.255em;
+//	content: "";
+//	border-top: 0.3em solid;
+//	border-right: 0.3em solid transparent;
+//	border-bottom: 0;
+//	border-left: 0.3em solid transparent;
+//}
+//// *Begining style for Mobile
+
+//// *Begining style for Tablet
+@media (min-width: $tabletWidth), (orientation: landscape) {
+}
+//// *End style for Tablet
+
+//// *Begining style for Desktop
+@media (min-width: $desktopWidth) {
+	.NavigationItems {
+		display: flex;
+		position: relative;
+	}
+}
+// *End style for Desktop
